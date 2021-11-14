@@ -12,9 +12,10 @@ interface Route {
 }
 
 // LazyLoad de componentes independientes
-const LazyPage1 = lazy(() => import('../pages/LazyPage1'));
-const LazyPage2 = lazy(() => import('../pages/LazyPage2'));
-const LazyPage3 = lazy(() => import('../pages/LazyPage3'));
+// Y se cambia el nombre de los chunks
+const LazyPage1 = lazy(() => import(/* webpackChunkName: "LazyPage1" */ '../01-lazyload/pages/LazyPage1'));
+const LazyPage2 = lazy(() => import(/* webpackChunkName: "LazyPage2" */ '../01-lazyload/pages/LazyPage2'));
+const LazyPage3 = lazy(() => import(/* webpackChunkName: "LazyPage3" */ '../01-lazyload/pages/LazyPage3'));
 
 export const routes: Route[] = [
   {

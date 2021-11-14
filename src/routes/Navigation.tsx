@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from 'react-router-dom';
 
 import logo from '../logo.svg';
-import { routes } from '../01-lazyload/router/routes';
+import { routes } from './routes';
 
 // Mientras se está cargando el componente hay que mostrar algo, y tenemos que decirle a React qué es ese algo
 // Es lo que se llama el Suspense con su fallback
